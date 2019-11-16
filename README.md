@@ -3,6 +3,7 @@
 'aleph.env' contains prod deploy specific secrets.
 
 1. `docker-compose.yml` and `aleph.env` for 'Aleph' in directory
+2. Set up the database and search indexes: `docker-compose run --rm shell aleph upgrade`
 2. `docker-compose up -d` exposes Aleph on port 8080
 3. Nginx reverse proxy with LetsEncrypt on https://opencourts.org.za
 4. Alephdata is configured to upload files to S3 in `aleph.env` this requires CORS bucket permissions to be set:
